@@ -1,10 +1,9 @@
-import java.util.ArrayDeque;
-import java.util.Queue;
+package dz2;
 
 public class MergeTwoSortedQueues {
     public static void main(String[] args) {
-        ArrayDeque<Integer> a = new ArrayDeque<>();
-        ArrayDeque<Integer> b = new ArrayDeque<>();
+        DLQueye<Integer> a = new DLQueye<>();
+        DLQueye<Integer> b = new DLQueye<>();
         int[] m1 = new int[] {1,7,9,11,13};
         int[] m2 = new int[] {2, 3, 4, 14, 15, 116};
         for (int i: m1) {
@@ -15,7 +14,7 @@ public class MergeTwoSortedQueues {
         }
 
 
-        ArrayDeque<Integer> c = new ArrayDeque<>();
+        DLQueye<Integer> c = new DLQueye<>();
         int i = a.pop();
         int j = b.pop();
         while (true) {
@@ -30,15 +29,14 @@ public class MergeTwoSortedQueues {
                 i = a.pop();
             }
         }
-        for (int k: a) {
-            c.add(k);
+        while (!a.isEmpty()) {
+            c.add(a.pop());
         }
-        for (int k: b) {
-            c.add(k);
+        while (!b.isEmpty()) {
+            c.add(b.pop());
         }
-
-        for (int k: c) {
-            System.out.print(k + " ");
+        while (!c.isEmpty()) {
+            System.out.print(c.pop() + " ");
         }
     }
 }

@@ -1,12 +1,13 @@
+package dz2;
+
 import java.util.Scanner;
-import java.util.Stack;
 
 public class postfixCalculator {
     public static void main(String[] args) {
-//        String pr = "2 5 - 79 + 4 *";
+        String pr = "2 5 - 79 + 4 *";
         Scanner sc = new Scanner(System.in);
-        String pr = sc.nextLine();
-        Stack<String> st = new Stack<>();
+//        String pr = sc.nextLine();
+        DLQueye<String> st = new DLQueye<>();
         int size = 0;
         st.add("");
         for (int i = 0; i < pr.length(); i++) {
