@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class postfixCalculator {
     public static void main(String[] args) {
-        String pr = "2 5 - 79 + 4 *";
+//        String pr = "2 5 - 79 + 4 *";
         Scanner sc = new Scanner(System.in);
-//        String pr = sc.nextLine();
+        String pr = sc.nextLine();
         DLQueye<String> st = new DLQueye<>();
         int size = 0;
         st.add("");

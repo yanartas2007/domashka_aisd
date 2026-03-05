@@ -11,18 +11,6 @@ public class DLQueye<T> { // не хочу делать и стек и очер�
         size = 0;
     }
 
-    public void enqueue(T item) {
-        addLast(item);
-    }
-
-    public T dequeue() {
-        return removeFirst();
-    }
-
-    public T peek() {
-        return getFirst();
-    }
-
     public void add(T item) {
         addLast(item);
     }
